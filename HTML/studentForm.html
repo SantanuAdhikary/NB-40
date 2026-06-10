@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student form</title>
+</head>
+<body>
+    <h1> student form</h1>
+
+    <form action="" autocomplete="off" method="post">
+
+
+        <fieldset>
+
+
+            <legend>student form</legend>
+
+            
+            <label for="sname">student name</label>
+            <input type="text" placeholder="give your name" id="sname" name="stuName" required>           <br><br>
+    
+            <label for="phno">phone number</label>
+            <input type="tel" placeholder="enter your number" id="phno" name="stuPh" maxlength="10" readonly>        <br><br>
+    
+            <label for="pass">password</label>
+            <input type="password" placeholder="enter your password" id="pass" name="stuPass" minlength="5">  <br><br>
+
+            <label for="age">age</label>
+            <input type="number" name="stuAge" id="age" placeholder="enter your age">  <br><br>
+
+            <label for="email">student email</label>
+            <input type="email" name="stuEmail" id="email" placeholder="enter your email" value="student@gmail.com"> <br><br>
+
+            <label for="">subjects</label> <br><br>
+            <label for="sub1">HTML</label>
+            <input type="checkbox" name="sub1" id="sub1" value="html">
+
+            <label for="sub2">CSS</label>
+            <input type="checkbox" name="sub2" id="sub2" value="css">
+
+            <label for="sub3">JAVASCRIPT</label>
+            <input type="checkbox" name="sub3" id="sub3" value="js">  <br> <br>
+
+            <label for="">select gender</label> <br><br>
+
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+
+            <label for="others">Others</label>
+            <input type="radio" name="gender" id="others" value="others">  <br><br>
+
+            <label for="add">address</label> <br> <br>
+            <textarea name="stuAddress" id="add" placeholder="enter your address" rows="20" cols="100"></textarea> <br><br>
+
+            <label for="">select course</label> <br><br>
+
+            <select name="course" id="">
+                <option value=""></option>
+                <option value="java">Java Full Stack</option>
+                <option value="python">Python Full Stack</option>
+                <option value="mern">Mern Stack</option>
+            </select>
+
+            <br><br>
+
+            <label for="">enter your dob</label>
+            <input type="date" name="dob" id=""> <br><br>
+
+
+            <button>register</button>
+            <button type="reset">reset</button>
+            <button disabled="disabled">disable</button>
+
+        </fieldset>
+        
+
+    </form>
+
+   
+</body>
+</html>
