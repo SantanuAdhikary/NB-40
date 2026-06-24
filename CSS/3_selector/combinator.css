@@ -1,0 +1,43 @@
+
+.box1{
+
+    background-color: lightcoral;
+}
+
+.box1 > #box2{
+    background-color: limegreen;
+}
+
+.box1  #box2  .box3{
+    background-color: lightyellow;
+}
+
+/* Descendant Selector */
+
+.box1 h2{ 
+    text-align: center;
+}
+
+/* Direct Child Selector  */
+
+.box1 > h1{
+    color:chartreuse;
+}
+
+
+
+.card > ul > #list4{
+    background-color: red;
+}
+
+/*  Adjacent siblings */
+
+.card  ul #list4+li{
+    background-color: green;
+}
+
+/* General Siblings */
+
+.card  ul #list4~li{
+    background-color: yellow;
+}

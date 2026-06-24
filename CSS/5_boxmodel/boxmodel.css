@@ -1,0 +1,99 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card1{
+    height: 200px;
+    width: 350px;
+    background-color: lightgrey;
+    /* padding: 30px; */
+    
+    /* padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    padding-left: 15px; */
+
+    padding: 20px 30px 25px 15px ;
+
+    margin: 50px 20px 30px 10px;
+
+    /* border: 13px solid black; */
+
+    border-width: 10px;
+    border-style: double;
+    border-color: red;
+    border-radius: 15px;
+}
+
+.card1 > h2{
+    /* padding-bottom: 20px; */
+    margin-bottom: 20px;
+    background-color: red;
+    border: 3px solid blue;
+}
+
+.card1 > p{
+    text-align: justify;
+    background-color: yellow;
+    border: 2px solid green;
+
+}
+
+#btn1{
+    padding: 20px 40px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    background-color: orangered;
+    color:white;
+    margin-top: 10px;
+    /* margin: 10px auto; */
+}
+
+#btn1:hover{
+    background-color: pink;
+}
+
+
+.card2{
+    background-color: lightpink;
+    width: 300px;
+    padding: 15px 25px;
+    margin: 50px auto;
+    border-radius: 20px;
+
+    border-top: 10px solid black;
+    border-right: 10px dashed brown;
+    border-bottom: 10px double green;
+    border-left: 10px groove green;
+}
+
+.card2 > .circle{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    /* background-color: red; */
+    border: 4px solid green;
+    margin: 0px auto;
+}
+
+.card2 > h2{
+    text-align: center;
+    margin: 8px 0px;
+}
+
+.card3 , .card4{
+    height: 200px;
+    width: 300px;
+    border: 4px solid black;
+    margin: 30px auto;
+}
+
+.card3{
+    padding: 50px;
+    border: 30px solid green;
+}
