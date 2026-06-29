@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex wrap</title>
+
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+
+         main{
+            min-height: 100vh;
+            background-color: lightsalmon;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap:30px;
+         }
+
+         main > .box{
+            height: 250px;
+            width: 300px;
+            border: 2px solid black;
+         }
+    </style>
+
+</head>
+<body>
+    
+    <main>
+        
+        <div class="box">box-1</div>
+        <div class="box">box-2</div>
+        <div class="box">box-3</div>
+        <div class="box">box-4</div>
+        <div class="box">box-5</div>
+        <div class="box">box-6</div>
+        <div class="box">box-7</div>
+        <div class="box">box-8</div>
+        <div class="box">box-9</div>
+        <div class="box">box-10</div>
+    </main>
+
+</body>
+</html>
