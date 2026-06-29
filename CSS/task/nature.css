@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right top, green,black) ;
+}
+
+
+nav{
+    background-color: black;
+    color:white;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 50px;
+}
+
+nav > h2{
+    letter-spacing: 2px;
+    font-size: 45px;
+}
+
+/* main tag style */
+
+main{
+    height: 450px;
+    /* background-color: lightgreen; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    color:white;
+}
+
+main > h1{
+    font-size: 60px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color:white;
+    text-shadow: 2px 2px 3px black;
+}
+
+main > p{
+    font-size: 21px;
+    letter-spacing: 1.5px;
+    width: 800px;
+    line-height: 30px;
+    
+}
+
+main > button{
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    border: none;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
+
+
+/* section style  */
+
+
+section{
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section > article{
+    height: 300px;
+    width: 350px;
+    /* border: 2px solid black; */
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px black;
+    padding: 10px 15px;
+    background: linear-gradient(to right top, white,skyblue) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section > article > img{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
