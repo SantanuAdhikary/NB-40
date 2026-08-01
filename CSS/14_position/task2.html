@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position task 2</title>
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+
+         .outer{
+            height: 100vh;
+            background:linear-gradient(orangered,yellow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         .inner{
+            height: 400px;
+            width: 500px;
+            background-color: white;
+            border-radius: 20px;
+            position: relative;
+         }
+
+         .inner > .circle{
+            height: 200px;
+            width: 200px;
+            border: 3px solid black;
+            border-radius: 50%;
+          
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         #c1{
+            background-color: black;
+            position: absolute;
+            left:50%;
+            top:-100px;
+            transform: translateX(-50%);
+
+         }
+         #c2{
+            background-color: blue;
+            position: absolute;
+            right: -100px;
+            top:50%;
+            transform: translateY(-50%);
+            
+         }
+         #c3{
+            background-color: green;
+            position: absolute;
+            bottom:-100px;
+            left:50%;
+            transform: translateX(-50%);
+            
+         }
+         #c4{
+            background-color: gray;
+            position: absolute;
+            left:-100px;
+            top:50%;
+            transform: translateY(-50%);
+           
+           
+         }
+         #c5{
+            background-color: pink;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+         
+         }
+    </style>
+</head>
+<body>
+
+    <div class="outer">
+         <div class="inner">
+             <div class="circle" id="c1">1</div>
+             <div class="circle" id="c2">2</div>
+             <div class="circle" id="c3">3</div>
+             <div class="circle" id="c4">4</div>
+             <div class="circle" id="c5">5</div>
+         </div>
+    </div>
+    
+</body>
+</html>

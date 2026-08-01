@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.outer{
+    height: 100vh;
+    background:linear-gradient(to right top,black,red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer >.inner{
+    height: 500px;
+    width: 500px;
+    background: linear-gradient(orangered,yellow);
+    border-radius: 20px;
+    position: relative;
+}
+
+.inner > img{
+    position: absolute;
+}
+
+#discount{
+    height: 150px;
+    left:10px;
+    bottom:30px;
+    transition: 1s ease-in;
+    z-index: 2;
+}
+
+#discount:hover{
+    transform: rotate(360deg);
+}
+#burger{
+    height: 400px;
+    bottom:20px;
+}
+#drinks{
+    height: 400px;
+    bottom: 30px;
+    z-index: 1;
+}

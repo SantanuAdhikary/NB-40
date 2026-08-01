@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid page</title>
+
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+
+         main{
+            height: 100vh;
+            background-color: lightcoral;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 15vh 75vh 10vh;
+         }
+         nav{
+            border: 2px solid black;
+            grid-column: span 2;
+         }
+         aside{
+            border: 2px solid black;
+         }
+         footer{
+            border: 2px solid black;
+            grid-column: span 2;
+         }
+    </style>
+</head>
+<body>
+    
+    <main>
+          <nav></nav>
+          <aside class="left"></aside>
+          <aside class="right"></aside>
+          <footer></footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,154 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    background:linear-gradient(red,yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+main > .circle{
+    height: 80px;
+    width: 80px;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    animation: up_down 2s ease-in infinite alternate;
+}
+
+main > #c1{
+    background-color: blue;
+}
+main > #c2{
+    background-color: white;
+    animation-delay: 0.1s;
+}
+main > #c3{
+    background-color: green;
+    animation-delay: 0.2s;
+}
+main > #c4{
+    background-color: black;
+    animation-delay: 0.3s;
+}
+main > #c5{
+    background-color: aqua;
+    animation-delay: 0.4s;
+}
+
+
+@keyframes up_down {
+    
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(100px);
+        box-shadow: 5px 7px 8px black;
+    }
+}
+
+
+section{
+    height: 100vh;
+    background: linear-gradient(to right top,blue,white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section > article{
+    height: 80%;
+    width: 85%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+
+}
+
+article > h1{
+    text-transform: uppercase;
+    font-size: 60px;
+    animation: textMoving 1.5s ease-in infinite alternate;
+}
+
+@keyframes textMoving {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(100px);
+        color:red;
+        text-shadow: 1px 2px 2px blue;
+    }
+}
+
+#heading2{
+   animation-delay: 0.1s;
+}
+#heading3{
+   animation-delay: 0.2s;
+}
+#heading4{
+   animation-delay: 0.3s;
+}
+#heading5{
+   animation-delay: 0.4s;
+}
+#heading6{
+   animation-delay: 0.5s;
+}
+#heading7{
+   animation-delay: 0.6s;
+}
+
+
+.outer{
+    height: 100vh;
+    background:linear-gradient(to right top,red,black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.inner > .box{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: green;
+    animation: movingBox 2s ease-in infinite alternate;
+}
+
+@keyframes movingBox {
+    0%{
+         transform: translate(0,0);
+    }
+    25%{
+        transform: translate(300px,0);
+    }
+    50%{
+        transform: translate(300px,300px);
+    }
+    75%{
+        transform: translate(0,300px);
+    }
+
+}

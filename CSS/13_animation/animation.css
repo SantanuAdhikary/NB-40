@@ -1,0 +1,92 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.outer1{
+  height: 100vh;
+  background: linear-gradient(red,yellow);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.outer1 > .left{
+    height: 400px;
+    width: 400px;
+    border: 3px solid white;
+}
+.outer1 > .right{
+    height: 400px;
+    width: 400px;
+    /* border: 3px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.left > .box1{
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 50%;
+   animation: changeColor 0.2s ease-in infinite alternate;
+    
+}
+
+@keyframes changeColor {
+    from{
+        background-color: black;
+    }
+    to{
+         background-color: white;
+    }
+}
+
+
+.right > .box2{
+    height: 200px;
+    width: 200px;
+    border-top: 5px solid green;
+    border-bottom: 5px solid green;
+    border-radius: 50%;
+    animation: spinner 1s linear infinite;    
+}
+
+@keyframes spinner {   
+    from{
+         transform: rotate(0deg);
+        }
+   to{
+        transform: rotate(360deg);
+
+    }
+}
+
+
+.outer2{
+    height: 100vh;
+    background:linear-gradient(yellow,red);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.orbit{
+    height: 400px;
+    width: 400px;
+    border: 3px solid white;
+    border-radius: 50%;
+    animation: spinner 1s infinite linear;
+}
+
+.planet{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+
+}
