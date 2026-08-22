@@ -1696,3 +1696,264 @@ console.log(student)
       console.log(copy)    // [10, 20, 30, 'html']
       console.log(arr10)  // [20, 30]
 ```
+
+## Timing Function 
+
+### setTimeout()
+
+* it is one built-in function in javascript used to execute any function after the specific time.
+
+* this is one asynchronized function , it executes once after all the synchronized code got executed.
+
+* it can two parameters , first one is callback function , second one is time in miliseconds.
+
+```js
+setTimeout(()=>{
+    console.log("hi")
+})
+
+console.log("hello")
+
+setTimeout(()=>{
+    console.log("how are you")
+},3000)
+
+console.log("bye")
+
+
+/*
+
+output : 
+
+hello
+bye 
+hi
+how are you
+
+*/ 
+
+```
+
+### setInterval()
+
+* this function is used to execute any callback-function repeatedly after some specific time.
+
+```js
+        setInterval(()=>{
+           console.log("hello everyone")
+        },1000)
+
+        /*
+          output : 
+                 hello everyone 
+                 hello everyone 
+                 .
+                 .
+                 .
+        */
+```
+
+### clearTimeout()
+
+* this method is used to cancel a timer previously established by calling setTimeout()
+
+* for doing this when we are creating any setTimeout() we have to store the id in one variable. then that variable we have to pass as an argument to the clearTimeout().
+
+
+```js
+        let t1 = setTimeout(()=>{
+           console.log("hi")
+        },5000)
+
+        clearTimeout(t1);
+```
+
+### clearInterval()
+
+* this method is used to cancel a timer previously established by calling setInterval()
+
+* for doing this when we are creating any setInterval() we have to store the id in one variable. then that variable we have to pass as an argument to the clearInterval().
+
+
+```js
+        let t2 = setInterval(()=>{
+           console.log("hello")
+        },1000)
+
+        clearInterval(t2);
+```
+
+
+### Date Object 
+
+* we can create object of Date by using `new` keyword.
+
+
+```js
+         let date = new Date();
+```
+
+**Methods**
+
+ **time related methods**
+
+ *getHours()* 
+ *getMinutes()*
+ *getSeconds()*
+ *getMilliseconds*
+ *toLocaleTimeString()* // 1:09:09 PM
+
+ *getFullYear()*
+ *getDate()*
+ *getMonth()* 
+  * it will give number where 0-> jan , 1-> feb , 2-> march and so on.
+
+ *getDay()*
+   * it will also give number where 0->sun , 1-> mon , 2->tue and so on.
+
+ *toLocaleDateString()*  // 8/20/2026
+
+
+## Difference between == and === 
+
+* == operator checks only the value not the datatype, but === checks the value and datatype.
+
+```js
+      let num1 = 20 ; 
+      let num2 = "20"; 
+
+
+      console.log(num1 == num2) ;  // true
+      console.log(num1 === num2) ; // false
+```
+
+## Difference Between for of and for in loop. 
+
+* for in loop 
+    array => it will give index 
+    string => it will give index 
+    object => it will give key
+
+* for of loop 
+    array => it will give elements
+    string => it will give characters
+    object => not possible ❌
+
+
+```js
+
+
+// ! use of for of and for in loop in array 
+
+let arr = [10,20,40,90]
+
+for(let ele of arr)
+{
+    console.log(ele)
+}
+
+console.log("--------------------")
+
+for(let i in arr)
+{
+    console.log(i, arr[i])
+}
+
+// ! use of for of and for in loop in string 
+
+
+let str = "java"
+
+for(let ch of str)
+{
+    console.log(ch)
+}
+
+console.log("---------------")
+for(let i in str)
+{
+    console.log(i, str[i])
+}
+
+console.log("---------------------------------------------")
+
+// !  for of and for in loop in object 
+
+let ob = {
+    sname : "miller",
+    sage : 10 , 
+    isStudent : true
+}
+
+for(let key in ob)
+{
+    console.log(key)
+}
+
+// not possible 
+
+ for(let x of ob)
+ {
+     console.log(x)  
+ }
+```
+
+## Closure 
+
+* in nested function even though outer function executed then also the inner function can access the properties of outer function, this is called as *closure*
+
+```js
+
+let outer = ()=>{
+    let a = 20 ; 
+
+    let inner =()=>{
+        a = a + 1 ; 
+        console.log(a);
+    }
+    return inner
+}
+
+let ans = outer();
+
+ans();     // 21
+ans();    //22
+ans();   //23
+ans();  //24
+ans(); //25
+```
+
+## what is function Currying 
+
+
+* Function currying is a functional programming technique in JavaScript that transforms a function with multiple arguments into a sequence of nesting functions, each taking a single argument. 
+
+* This process relies heavily on JavaScript closures, which allow inner functions to "remember" and access variables from their outer scopes even after the outer functions have finished executing.
+
+```js
+
+
+function add(a)
+{
+   return function(b)
+   {
+     return function(c)
+     {
+        return a + b + c ;
+     }
+   }
+}
+
+let sum = add(1)(2)(3)
+
+
+// ! function currying with arrow function 
+
+
+let add2 = a=> b=> c => a + b + c ;
+
+console.log(add2(10)(20)(30))
+        
+    
+
+```
