@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom practice</title>
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+         nav{
+            height: 80px;
+            background-color: lightgreen;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+         }
+
+         nav  > ul{
+            display: flex;
+            gap:20px;
+            list-style: none;
+         }
+         nav li{
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+         }
+
+         main{
+            height: 300px;
+            background-color: lightslategray;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+         }
+
+         main > .card{
+            height: 180px;
+            width: 280px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+         }
+
+        
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <h2 id="logo">DomLogo</h2>
+        
+        <ul>
+            <li>home</li>
+            <li id="about">about</li>
+            <li>contact</li>
+        </ul>
+
+        <button>login</button>
+    </nav>
+
+    <section>
+         <h1>welcome to DOM session</h1>
+    </section>
+    
+    <main>
+         <div class="card">
+             <h2>card1</h2>
+             <p id="para1">Lorem ipsum dolor sit amet.</p>
+         </div>
+         <div class="card">
+             <h2>card2</h2>
+             <p>Lorem ipsum dolor sit amet.</p>
+         </div>
+         <div class="card">
+             
+         </div>
+    </main>
+    <script src="./dom1.js"></script>
+</body>
+</html>
