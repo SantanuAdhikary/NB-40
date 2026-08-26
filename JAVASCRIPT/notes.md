@@ -1,4 +1,4 @@
-
+p
 # JAVASCRIPT 
 
 * javascript is a programming language that is used to add functionalities to the webpages.
@@ -1957,3 +1957,215 @@ console.log(add2(10)(20)(30))
     
 
 ```
+
+## DOM 
+
+
+diagram
+
+**BOM**
+
+* BOM stands for Browser Object Model that contains global object *window*.
+
+**what is window object**
+
+* The window object is the root global object in client-side JavaScript, representing the browser window or tab that runs the code.
+
+**what is DOM**
+
+* DOM stands for *Document Object Model* , it is used to interact and manipulate the UI.
+
+**what is document**
+
+* it is the object that is main entry node in DOM.
+* in document object our html code is stored as object.
+* by using this document we can access all our html elements.
+
+
+### How to Target elements from js
+
+
+**1. document.getElementById()**
+    
+  * this method targets only one element.
+  * here we have to pass the `id` of the element which we want to target as a parameter.
+
+  ```html    
+        <p id="para1"> i am para1 </p>
+        <p > i am para2 </p>
+        <p > i am para3 </p>
+  ```  
+
+  ```js
+          let para1 = document.getElementById("para1");
+    
+  ```
+
+  **2. document.getElementsByTagName()**
+
+   * this method will target all the elements having same tagname.
+   * it will return one HTMLCollection , that behaves like array.
+   * now if we want to take any of the elmement we have to use index.
+
+   ```js
+        let paragraphs = document.getElementsByTagName("p");
+        let secondPara = paragraphs[1];
+        console.log(paragraphs);
+        console.log(secondPara);
+   ```
+
+   **3. document.getElementsByClassName()**
+
+   * this method is used to target the element based on classname. 
+   * it will return one HTMLCollection. 
+
+   **4. document.querySelector()**
+
+   * in this method we can pass `id`, `class` and `tagname`. 
+   * it will target only the first element. 
+   * for applying id we have to give `#` and for applying class we have to give `.` for tagname name of the tag.
+
+   **5. querySelectorAll()**
+
+   * by using this method we can target by the selectors(id/class/tag) and it will target all the elements.
+
+
+
+### How to apply CSS from js 
+
+
+syntax: 
+             element.style.cssproperty = "value"
+
+  ```html
+         <p> this is first para </p>
+         <p> this is second para </p>
+  ```
+
+  ```js
+         let firstPara = document.querySelector("p");
+
+         firstPara.style.backgroundColor = "pink";
+         firstPara.style.color = "green";
+  ```
+
+
+### innerText and innerHTML 
+
+```html
+
+        <div class="box1">
+               <h2> i am box1 </h2>
+               <p> how are you </p>
+        </div>
+       
+       <div class = "box2">
+
+       </div>
+```
+
+**innerText**
+   
+   * it will give the content of any tags in text.
+
+  ```js
+       let box1 = document.querySelector(".box1")
+       console.log(box1.innerText);  
+
+       /* i am box1
+        how are you */
+  ```
+
+**innerHTML**
+
+  * it will give the content with tags.
+
+  ```js
+        console.log(box1.innerHTML);
+
+      /*
+        <h2> i am box1 </h2>
+        <p> how are you </p>
+       */
+  ```
+
+###  how to add and remove the class 
+
+**classList**
+    
+  * by using this `classList`  property we can get to know what are the classes are present in any element.
+
+**classList.add()**
+
+  * it is used to add any new class in the element.
+
+**classList.remove()**
+
+  * it is used to remove any existing class from the element.
+
+```html
+  
+     <div class="card dark">
+
+     </div>
+```
+
+  ```js
+         let card = document.querySelector(".card");
+         card.classList.remove("dark")
+         card.classList.add("light")
+  ```
+
+### How to create any element from js 
+
+**document.createElement()**
+   
+   * this method is used to create element.
+   * then we can write content inside that , we can apply css.
+   * but this element will not display on the UI.
+
+   * for displaying we have 4 methods. 
+
+**append()** : it helps to insert the element at the end.
+**prepend()** : it helps to insert the element at the starting.
+**before()** : it display the element before the targetted element.
+**after()** : it display the element after the targetted element.
+
+```html
+              <ol>
+                   <li>sql</li>
+                   <li>java</li>
+                   <li>mt</li>
+              </ol>
+```
+
+```js
+          let sub1 = document.createElement("li")
+          sub1.innerText = "python";
+
+          let sub2 = document.createElement("li")
+          sub2.innerText = "html";
+
+          let sub3 = document.createElement("li")
+          sub3.innerText = "css";
+
+          let sub4 = document.createElement("li")
+          sub3.innerText = "js";
+
+          let ol = document.querySelector("ol")
+
+          ol.append(sub1)
+          ol.prepend(sub2)
+          ol.before(sub3)
+          ol.after(sub4)
+```
+
+output:
+
+      css 
+         1.html
+         2.sql
+         3.java
+         4.mt
+         5.pyton
+      js
