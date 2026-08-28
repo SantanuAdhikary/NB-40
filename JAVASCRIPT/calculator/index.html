@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+
+    <div class="outer">
+         <h1>calculator</h1>
+         <div class="inner">
+             <input type="text">
+
+             <div class="row">
+                 <button onclick="clean()">C</button>
+                 <button onclick="back()"><-</button>
+                 <button  onclick="addDigits('/')">/</button>
+                 <button  onclick="addDigits('*')">*</button>
+             </div>
+             <div class="row">
+                 <button onclick="addDigits('7')">7</button>
+                 <button  onclick="addDigits('8')">8</button>
+                 <button  onclick="addDigits('9')">9</button>
+                 <button  onclick="addDigits('-')">-</button>
+             </div>
+             <div class="row">
+                 <button  onclick="addDigits('4')">4</button>
+                 <button  onclick="addDigits('5')">5</button>
+                 <button  onclick="addDigits('6')">6</button>
+                 <button  onclick="addDigits('+')">+</button>
+             </div>
+             <div class="row">
+                 <button  onclick="addDigits('1')">1</button>
+                 <button  onclick="addDigits('2')">2</button>
+                 <button  onclick="addDigits('3')">3</button>
+                 <button  onclick="addDigits('%')">%</button>
+             </div>
+             <div class="row">
+                 <button  onclick="addDigits('0')">0</button>
+                 <button>EE</button>
+                 <button  onclick="addDigits('.')">.</button>
+                 <button onclick="calculate()">=</button>
+             </div>
+         </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
