@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event in js</title>
+
+    <style>
+         .card1, .card2 , .card3 , .card4{
+            height: 200px;
+            width: 300px;
+            border: 2px solid black;
+         }
+    </style>
+</head>
+<body>
+    <h1> Event in javascript</h1>
+
+    <button onclick="add()">click me</button>
+
+
+    <div class="card1" onclick="changeColor()">
+
+    </div>
+
+    <button ondblclick="updateText()">double click me</button>
+
+
+    <div class="card2" onmouseover="changeColor2()" onmouseleave="changeColor3()">
+        <h2>product name : laptop </h2>
+        <p> price : 60000</p>
+    </div>
+
+    <div class="card3" onclick="copyText()">
+
+    </div>
+
+
+    <div class="card4" onmousemove="increase()">
+            <h1>0</h1>
+    </div>
+
+    <script src="./event.js"></script>
+</body>
+</html>
