@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backgroundChange</title>
+
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+
+         .outer{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap:35px;
+            padding: 30px;
+         }
+
+         .outer > button{
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 19px;
+            font-weight: bold;
+            letter-spacing: 1.6px;
+            cursor: pointer;
+         
+         }
+    </style>
+</head>
+<body>
+    
+  <div class="outer">
+     <button onclick="changeColor('red')">red</button>
+     <button onclick="changeColor('green')">green</button>
+     <button onclick="changeColor('black')">black</button>
+     <button onclick="changeColor('blue')">blue</button>
+     <button onclick="changeColor('white')">white</button>
+  </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
