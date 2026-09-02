@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event listener</title>
+
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+         }
+
+         header , section{
+            text-align: center;
+         }
+
+         header > button , section > button{
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            margin-top: 10px;
+            font-weight: bold;
+            cursor: pointer;
+         }
+
+         ol{
+          
+            width: 60%;
+            margin: 10px auto;
+         }
+
+         ol > li{
+            padding: 10px;
+            background-color: pink;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            list-style: none;
+         }
+
+         article{
+            background-color: lightcyan;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:25px;
+            flex-direction: column;
+         }
+         article > input{
+            padding: 10px;
+            font-size: 19px;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+         }
+
+         article > .box{
+            width: 500px;
+            height: 200px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.7);
+
+            padding: 20px;
+            font-size: 21px;
+            font-weight: bold;
+         }
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        
+        <h1 > Event Listener In Javascript</h1>
+        <button id="btn1">get started</button>
+        <button id="btn2">button 2</button>
+    </header>
+
+    <ol>
+        <li>sql</li>
+        <li>java</li>
+        <li>python</li>
+        <li>webtech</li>
+        <li>ad java</li>
+    </ol>
+
+    <section>
+         <button onclick="f1()" onclick="f2()">button 3</button>
+         <button id="btn4">button 4</button>
+    </section>
+
+    <article> 
+        <h1> keyboard event</h1>
+
+        <input type="text" placeholder="write something">
+        <div class="box">
+
+        </div>
+    </article>
+
+    <script src="./event2.js"></script>
+</body>
+</html>
