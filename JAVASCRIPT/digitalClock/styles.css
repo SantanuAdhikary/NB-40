@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main {
+  height: 100vh;
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-alarm-clock-black-background-image_15693270.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+main > h1 {
+  font-size: 60px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color: rgb(241, 240, 240);
+  text-shadow: 5px 6px 4px red;
+}
+
+main > h2 {
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+main > h3 {
+  font-size: 38px;
+  letter-spacing: 5px;
+}
