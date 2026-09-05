@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event propagation</title>
+
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+
+         main{
+            height: 100vh;
+            background: linear-gradient(to right top,red,yellow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         .outer{
+            height: 80%;
+            width: 80%;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         .middle{
+            height: 80%;
+            width: 80%;
+            background-color: blue;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         .inner{
+            height: 80%;
+            width: 80%;
+            background-color: green;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         ol{
+            width: 80%;
+            margin: 20px auto;
+         }
+
+         ol > li{
+            background-color: pink;
+            padding: 10px 20px;
+            font-size: 25px;
+            font-weight: bold;
+            list-style: none;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            letter-spacing: 1.4px;
+         }
+
+         ol > li:hover{
+            background-color: lightcoral;
+         }
+    </style>
+</head>
+<body>
+   <main>
+       
+       <div class="outer">
+           <div class="middle">
+               <div class="inner"></div>
+           </div>
+       </div>
+   </main> 
+
+
+   <ol>
+      <li>html</li>
+      <li>css</li>
+      <li>js</li>
+      <li>react</li>
+      <li>node</li>
+   </ol>
+
+   <script src="./app.js"></script>
+</body>
+</html>
