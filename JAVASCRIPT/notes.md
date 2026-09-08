@@ -1,4 +1,4 @@
-p
+
 # JAVASCRIPT 
 
 * javascript is a programming language that is used to add functionalities to the webpages.
@@ -1958,7 +1958,7 @@ console.log(add2(10)(20)(30))
 
 ```
 
-## DOM 
+## DOM (Document Object Model)
 
 
 diagram
@@ -2169,3 +2169,246 @@ output:
          4.mt
          5.pyton
       js
+
+## events in javascript 
+
+* any action we are performing on UI is called event.
+
+* we can handle the event by using *event handler* and *event listener*
+
+**main types of event**
+
+ 1. *mouse event*
+ 2. *keyboard event*
+ 3. *form event*
+ 4. *window event*
+
+
+### How to handle events by Event Handler
+
+```js
+      let myInfo = ()=>{
+           console.log("my name is santanu , i am a fullstack developer");
+      }
+```
+
+```html
+         <button onclick="myInfo()"> Get My Information</button>
+         
+```
+
+### can we write multiple event in same element ? 
+
+ * yes.
+
+ **note**
+      we can apply multiple event in the same element but the event should be different.
+
+```html
+         <div  onmouseover="fun1()" onmouseout="fun2()">
+              <h2> applying mulitple events</h2>
+         </div>
+```
+
+###  Event Types 
+
+
+####  Keyboard Events 
+      - keydown: Triggered when a key is pressed down. 
+      - keyup: Triggered when a key is released. 
+      - keypress: Triggered when a key is pressed (deprecated, use keydown or keyup). 
+ 
+####  Mouse Events 
+      - click: Triggered when an element is clicked. 
+      - dblclick: Triggered when an element is double clicked. 
+      - mouseover: Triggered when the mouse pointer is over an element. 
+      - mousemove : Triggered when mouse is moved on the element
+      - mouseleave : Triggered when mouse is taken out from the element.
+ 
+####  Form Events 
+      - submit: Triggered when a form is submitted. 
+      - focus: Triggered when an element receives focus. 
+      - blur: Triggered when an element loses focus. 
+      - change: Triggered when the value is changed in the input / select tag.
+
+####  Window Events 
+
+     - load: Fires when the entire web page has finished loading, including all dependent resources like stylesheets, scripts, and images.
+     
+     - resize: Triggers instantly whenever the user adjusts the width or height of the browser window.
+     
+     - scroll: Fires continuously as the user scrolls up or down through the document page.
+
+
+### What is Event Listener
+
+An event listener is a JavaScript function that waits for a specific action to happen on a webpage and then runs code in response.
+
+#### How to Write an Event Listener
+
+The modern standard way to attach a listener to an HTML element is by using the **addEventListener() method**.
+
+It requires two primary pieces of information:
+
+   *1. The event type:* The specific action you are listening for (e.g., 'click', 'keydown', 'submit').
+
+   *2. The callback function:* The exact JavaScript code you want to execute when that action occurs.
+
+
+```js
+       // 1. Select the HTML element
+     const button = document.querySelector('.submit-btn');
+
+      // 2. Attach the event listener
+
+    button.addEventListener('click', (event) => {
+      
+      console.log('The button was clicked!');
+    });
+
+```
+
+### what is event Object (e)
+
+* When an event occurs, the browser automatically creates a special event object and passes it as an argument into your callback function (often written simply as e or event).
+
+* This object acts like a data report containing useful details about what just happened:
+
+**e.target:** Identifies exactly which element was interacted with.
+
+**e.key:** Identifies which exact key was pressed during a keyboard event.
+
+**e.type:** Identifies which event has occured on the element.
+
+**e.preventDefault()**: A highly useful method inside the object that stops the browser's default behavior (such as stopping a form from reloading the page when submitted).
+
+
+#### advantage of  addEventListener? (Benefits)
+
+Older legacy code used inline HTML attributes (like <button onclick="myFunction()">) to handle actions. Modern event listeners are preferred for several reasons:
+
+* *Separation of Concerns:* Keeps your HTML clean and keeps your logic entirely inside your JavaScript files.
+
+* *Multiple Listeners:* You can attach multiple independent event listeners to the exact same element without them overwriting each other.
+
+* *Easy Cleanup:* we can dynamically remove a listener later using removeEventListener(), which helps optimize computer memory.
+
+
+### What is  Event Propagation
+
+Event propagation defines the order in which events are handled.
+
+   **1. Capturing Phase:** The event travels down from the very top (window) to the target element.
+  **2. Target Phase:** The event arrives directly at the specific element you interacted with.
+   **3. Bubbling Phase:** The event travels all the way back up from the target element to the very top.
+
+
+#### Event Bubbling (The Default)
+
+Event bubbling means that when an event happens on an element, it first runs the handlers on that element, then on its parent, and then all the way up its ancestors like a bubble rising in water.
+
+
+##### How to Stop It
+
+```js
+button.addEventListener('click', (e) => {
+  e.stopPropagation(); // The bubble stops here; the parent div will never know this click happened.
+  console.log('Button clicked!');
+});
+
+```
+
+####  Event Capturing 
+
+* Event capturing is the exact opposite of bubbling. 
+* The event starts at the top-level window object and trickles downwards through the HTML elements until it reaches the target.
+
+##### How to Use It
+
+```js
+
+parent.addEventListener('click', () => {
+  console.log('Parent caught it during CAPTURING');
+}, true); 
+
+```
+
+
+#### What is  Event Delegation 
+
+* Event delegation is a highly efficient design pattern made possible because event bubbling exists.
+
+* Instead of attaching individual event listeners to dozens of specific child items, we can attach one single listener to a shared parent element.
+
+* When a child is interacted with, the event bubbles up to the parent, and you use the event.target property to identify exactly which child started it.
+
+
+```js
+      let ol = document.querySelector("ol")
+
+      ol.addEventListener("click",(e)=>{
+
+          console.log(e.target.innerText)
+          
+          inner.innerHTML = `<h1>${e.target.innerText}</h1>`
+      })
+```
+
+
+## Promise 
+
+*  a Promise is a javascript object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+* promise having 3 states. 
+
+**1. pending :**
+    
+  * The initial state. The asynchronous operation is still working, and the result is not yet available.
+
+**2. fulfilled :**
+  
+  * The operation completed successfully, and the Promise holds the resulting value.
+
+**3. rejected :**
+  
+  * The operation failed, usually due to an error, and the Promise holds the reason or error message.
+
+
+### how to create promise 
+
+* we have to create the promise by using `new` keyword. 
+* promise takes one callback function function , there will be two parameters `resolve` and `reject`
+
+
+### how to handle the promise 
+
+ * if the promise having `resolve()` or promise is fulfilled that we can handle by `.then()` block
+
+ * if the promise is rejected , that we have to handle by `.catch()` block.
+
+ * `.finally()` block will execute everytime irrespective of promise is fulfilled or rejected.
+
+
+ ```js
+ 
+let myPromise = new Promise((resolve,reject)=>{
+
+    let study = false ;
+
+    if(study)
+        resolve("I will start your react batch")
+    else
+        reject("I will not start your react batch 😡🤬")
+})
+
+myPromise
+.then((data)=>{
+    console.log(data)
+})
+.catch((err)=>{
+    console.log(err)
+})
+.finally(()=>{
+  console.log("promise is there")
+})
+ ```
