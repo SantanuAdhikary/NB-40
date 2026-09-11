@@ -1,0 +1,95 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.outer{
+    height: 100vh;
+    background: linear-gradient(skyblue,white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+}
+
+.outer > h1{
+    font-size: 50px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+.outer > form{
+    width: 380px;
+    background-color: #f4f4f4;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.6);
+}
+
+form > input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 19px;
+    outline: none;
+}
+
+form > input:focus{
+    border-color: #1877F2;
+}
+form > label{
+    display: block;
+    font-size: 19px;
+    text-transform: capitalize;
+    letter-spacing: 1.4px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form > button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1.4px;
+    background-color: #1877F2;
+    color:white
+}
+
+form > button:hover{
+    background-color: #0f4c9b;
+}
+
+.outer > footer{
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.outer > footer > p{
+    font-size: 18px;
+    text-transform: capitalize;
+    letter-spacing: 1.3px;
+    color:#333;
+    
+}
+
+.outer a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color:#0f4c9b;
+    letter-spacing: 1.4px;
+}
