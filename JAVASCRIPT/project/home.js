@@ -1,6 +1,6 @@
 
 
-
+let products = [];
 
 let getProducts = async()=>{
 
@@ -8,7 +8,8 @@ let getProducts = async()=>{
 
         let res = await fetch("https://fakestoreapi.com/products")
         let data = await res.json();
-        
+        products = data ; 
+
         displayProducts(data);
     }catch(err)
     {
@@ -45,7 +46,7 @@ username.innerText = loginUser.name;
                         <img src= ${product.image}>
                         <p> ${product.title}</p>
                         <p>${product.price * 80.} Rs</p>
-                        <button> add to cart</button>
+                        <button onclick="addToCart(${product.id})"> add to cart</button>
                       `
 
     main.append(div)
@@ -63,3 +64,35 @@ logout.addEventListener("click",()=>{
 
     window.location.href = "login.html"
 })
+
+
+
+let addToCart =(productId)=>{
+
+    //  console.log(productId)
+
+    // console.log(products)
+
+    let item = products.find((product)=> product.id == productId)
+    console.log(item)
+
+
+    let users = JSON.parse(localStorage.getItem("users"))  || []
+
+    // console.log(users)
+
+    let loginUser = JSON.parse( localStorage.getItem("loginUser"))
+    // console.log(loginUser)
+
+    let user = users.find((u)=> u.id == loginUser.id);
+
+    // console.log(user)
+
+    user.cart.push(item);
+
+
+    localStorage.setItem("users",JSON.stringify(users));
+    localStorage.setItem("loginUser",JSON.stringify(user))
+
+    alert("product added to the cart")
+}

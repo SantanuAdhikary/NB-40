@@ -25,6 +25,12 @@ nav > .right{
     align-items: center;
 }
 
+.right > a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .right > h3{
     color: #ccc;
 }

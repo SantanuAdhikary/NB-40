@@ -38,7 +38,8 @@ form.addEventListener("submit",(e)=>{
         id: Date.now(),
         name : name ,
         email : email,
-        password : password
+        password : password,
+        cart : []
     }
 
     // ! we are updating the user that we got from localstorage 

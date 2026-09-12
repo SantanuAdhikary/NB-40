@@ -1,0 +1,142 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav > h1 {
+    font-size: 32px;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background-color: #1877F2;
+    transition: 0.3s;
+}
+
+nav > a:hover {
+    background-color: #0f4c9b;
+}
+
+
+
+
+main {
+    min-height: calc(100vh - 100px);
+    background-color: #f4f4f4;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+
+
+
+main > .card {
+    width: 350px;
+    min-height: 350px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.4s;
+}
+
+main > .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 3px 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+
+.card > img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+
+
+
+.card > p:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #333;
+}
+
+
+
+.card > p:nth-child(3) {
+    font-size: 19px;
+    font-weight: bold;
+    color: rgb(83, 83, 235);
+}
+
+
+.card > button {
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(246, 100, 100);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+.card > button:hover {
+    background-color: rgb(220, 50, 50);
+    transform: scale(1.05);
+}
+
+
+
+main > h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+    color: #555;
+    text-transform: capitalize;
+}
+
