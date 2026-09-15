@@ -29,5 +29,8 @@
 29. what is the use of event Delegation ?
 30. what is the difference b/2 localstorage and session storage ?
 31. explain promise and how to handle promise ?
+32. what is fetch 
+33. what is async and await 
+34. explain Promise methods (all,any,race,allSettled)
 
 
