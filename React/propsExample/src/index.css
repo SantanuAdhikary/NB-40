@@ -1,0 +1,38 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+  height: 100px;
+  background-color: #333;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+main{
+  min-height: calc(100vh - 100px);
+  background:linear-gradient(skyblue,white);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap:25px;
+  flex-wrap: wrap;
+}
+
+main > .card{
+  height: 250px ;
+  width: 450px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}

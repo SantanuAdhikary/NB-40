@@ -1,0 +1,77 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+  height: 100px;
+  background: linear-gradient(to right,purple,white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav > h1{
+  color:white;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 2px 2px black;
+}
+
+nav a{
+ text-transform: uppercase;
+ font-weight: bold;
+ letter-spacing: 1.4px;
+ cursor: pointer;
+ text-decoration: none;
+ font-size: 18px;
+ margin-right: 20px;
+ color:black
+}
+
+nav a:hover{
+  color:#333;
+}
+
+header{
+  height: 200px;
+  background:linear-gradient(skyblue,white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:40px;
+}
+
+header > button{
+   padding: 10px 30px;
+   border-radius: 10px;
+   font-size: 17px;
+   font-weight: bold;
+   letter-spacing: 1.4px;
+   border: none;
+   cursor: pointer;
+   box-shadow: 2px 4px 8px rgba(0,0,0,0.6);
+  }
+  
+header > button:hover{
+    transform: scale(1.04);
+}
+
+
+header > button:nth-child(1)
+{
+  background:linear-gradient(to right top, lightgreen,white);
+}
+header > button:nth-child(2)
+{
+  background:linear-gradient(to right top, lightcoral,white);
+}
+header > button:nth-child(3)
+{
+  background:linear-gradient(to right top, lightskyblue,white);
+}
+header > button:nth-child(4)
+{
+  background:linear-gradient(to right top, lightpink,white);
+}
