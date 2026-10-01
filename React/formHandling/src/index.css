@@ -1,0 +1,61 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.signup{
+  height: 100vh;
+  background: linear-gradient(skyblue,white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:25px;
+}
+
+.signup > h1{
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+form{
+  width: 350px;
+  padding: 20px 40px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.6);
+
+}
+
+form > input{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  border: 2px solid #ccc;
+}
+form > label{
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+form > button{
+  background-color: #333;
+  color:white;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+
+}
