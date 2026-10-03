@@ -5,7 +5,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.signup{
+.signup , .loginContainer{
   height: 100vh;
   background: linear-gradient(skyblue,white);
   display: flex;
@@ -58,4 +58,76 @@ form > button{
   text-transform: uppercase;
   letter-spacing: 1.3px;
 
+}
+
+ footer{
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 15px;
+}
+
+ footer p{
+  text-transform: capitalize;
+}
+ footer a{
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+/* home page css */
+
+.homePage{
+  min-height: 100vh;
+  background:linear-gradient(skyblue,white);
+}
+
+.homePage header{
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homePage input{
+  width: 60%;
+  padding: 12px;
+  font-size: 19px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  letter-spacing: 2px;
+}
+
+.homePage main{
+  padding: 20px;
+  
+  
+}
+
+.homePage li{
+
+  width: 70%;
+  background-color: lightpink;
+  margin: 15px auto;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  box-shadow: 2px 3px 7px rgba(0,0,0,0.6);
+}
+
+.homePage li:nth-child(2n)
+{
+  background-color: #444;
+  color:white;
+}
+
+.homePage li:hover{
+  background-color: orangered;
+  color:white;
+}
+
+main h1{
+  text-align: center;
 }

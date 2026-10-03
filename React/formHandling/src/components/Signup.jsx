@@ -1,17 +1,40 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Signup = () => {
   let [userName, setUserName] = useState("");
   let [pass, setPass] = useState("");
   let [email, setEmail] = useState("");
+  const navigate =  useNavigate()
 
   let handleSubmit = (e) => {
     e.preventDefault();
 
-
     console.log(userName,pass,email)
 
-    console.log("form is submitted");
+    if(!userName || !pass || !email)
+    {
+      toast.warning("please fill all the fields")
+      return;
+    }
+
+    localStorage.setItem("userName",userName)
+    localStorage.setItem("userPass",pass)
+    localStorage.setItem("userEmail",email)
+
+    toast.success("form is submitted",{
+      autoClose:800
+    });
+    
+    setEmail("")
+    setPass("")
+    setUserName("")
+
+    setTimeout(()=>{
+      navigate("/login")
+    },1000)
+
   };
 
   return (
@@ -45,6 +68,12 @@ const Signup = () => {
 
         <button>signup</button>
       </form>
+
+      <footer>
+        <p>already have an account ?</p>
+        <Link to="/login">login</Link>
+
+      </footer>
     </div>
   );
 };
