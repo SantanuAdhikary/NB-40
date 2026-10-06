@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.outer{
+  min-height: 100vh;
+  background: linear-gradient(skyblue,white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+}
+
+.outer > h1{
+  font-size: 50px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color:white;
+  text-shadow: 2px 2px 3px black;
+}
+
+header{
+  width: 400px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap:10px;
+}
+
+header > input{
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+header > button{
+  border: none;
+  background-color: rgb(55, 234, 55);
+  color:white;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+header > button:hover{
+  background-color: rgb(26, 138, 26);
+}
+
+main > li{
+  width: 400px;
+  background-color: pink;
+  margin-bottom: 10px;
+  padding: 10px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap:10px;
+  border-radius: 10px;
+  letter-spacing: 1.4px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.6);
+}
+
+main > li > button{
+  padding: 7px;
+  border: none;
+  letter-spacing: 1.4px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+main > li > button:hover{
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.6);
+  transform: scale(1.04);
+}
+
+main > li > button:nth-child(2)
+{
+  background-color: red;
+  color:white;
+}
+main > li > button:nth-child(1)
+{
+  background-color: lightgreen;
+}
