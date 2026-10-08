@@ -1,0 +1,72 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+  height: 80px;
+  background-color: #222;
+  color:white;
+  display: flex;
+  padding: 0 10%;
+  justify-content: flex-end;
+  gap:20px;
+  align-items: center;
+}
+
+nav > a{
+  color:white;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+main{
+  display: flex;
+  padding: 20px;
+  min-height: 100vh;
+  background:linear-gradient(skyblue,white);
+  flex-wrap: wrap;
+  gap:20px;
+
+
+}
+
+main > .card{
+  height: 150px;
+  width: 400px;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.7);
+}
+
+.card > p:nth-child(1)
+{
+  font-weight: bold;
+  font-size: 18px;
+}
+.card > p:nth-child(2)
+{
+  font-weight: bold;
+  font-size: 17px;
+  color:green;
+}
+
+.card > button{
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: darkred;
+  color:white;
+}
