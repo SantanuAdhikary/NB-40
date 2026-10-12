@@ -1,0 +1,21 @@
+{
+  "students": [
+    {
+      "sname": "miller",
+      "sid": "101",
+      "semail": "miller@gmail.com",
+      "phNo": "9876543210",
+      "dept": "cse",
+      "id": "_FBck4SACmc"
+    },
+    {
+      "sname": "scott",
+      "sid": "102",
+      "semail": "scott@gmail.com",
+      "phNo": "7076543812",
+      "dept": "civil",
+      "id": "lAx6BdtICSY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

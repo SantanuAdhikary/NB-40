@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+nav{
+  height: 80px;
+  background-color: #6d6dfb;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  align-items: center;
+}
+
+ul{
+  display: flex;
+  gap:10px;
+  
+}
+
+ul > a{
+  color:white;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+
+/* addStudent Component  */
+
+.addStudent {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f5ff;
+  padding: 30px 20px;
+}
+
+.addStudent form {
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(109, 109, 251, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.addStudent input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d6d6f5;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+.addStudent input:focus {
+  border-color: #6d6dfb;
+  box-shadow: 0 0 5px rgba(109, 109, 251, 0.3);
+}
+
+.addStudent input::placeholder {
+  color: #999;
+  text-transform: capitalize;
+}
+
+.addStudent button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6d6dfb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addStudent button:hover {
+  background-color: #5252e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(109, 109, 251, 0.25);
+}
+
+.addStudent button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .addStudent form {
+    padding: 25px 20px;
+  }
+
+  .addStudent input {
+    font-size: 14px;
+  }
+}
