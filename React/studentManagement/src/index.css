@@ -1,36 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-nav{
+nav {
   height: 80px;
   background-color: #6d6dfb;
-  color:white;
+  color: white;
   display: flex;
   justify-content: space-between;
   padding: 0 10%;
   align-items: center;
 }
 
-ul{
+ul {
   display: flex;
-  gap:10px;
-  
+  gap: 10px;
 }
 
-ul > a{
-  color:white;
+ul > a {
+  color: white;
   font-size: 18px;
   text-decoration: none;
   text-transform: capitalize;
 }
-
 
 /* addStudent Component  */
 
@@ -107,5 +104,145 @@ ul > a{
 
   .addStudent input {
     font-size: 14px;
+  }
+}
+
+
+
+/* DisplayStudents Component */
+
+.displayStudents {
+  min-height: calc(100vh - 80px);
+  padding: 40px 5%;
+  background-color: #f4f5ff;
+  font-family: "Poppins", sans-serif;
+  overflow-x: auto;
+}
+
+
+.displayStudents h1 {
+  text-align: center;
+  color: #6d6dfb;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+
+.displayStudents table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(109, 109, 251, 0.15);
+}
+
+
+.displayStudents thead {
+  background-color: #6d6dfb;
+  color: white;
+}
+
+.displayStudents th {
+  padding: 16px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* Table Data */
+
+.displayStudents td {
+  padding: 14px;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+  border-bottom: 1px solid #ededfa;
+}
+
+
+.displayStudents tbody tr:nth-child(even) {
+  background-color: #f9f9ff;
+}
+
+
+.displayStudents tbody tr {
+  transition: background-color 0.3s;
+}
+
+.displayStudents tbody tr:hover {
+  background-color: #ededff;
+}
+
+
+.displayStudents td button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.displayStudents td button:first-child {
+  background-color: #6d6dfb;
+}
+
+.displayStudents td button:first-child:hover {
+  background-color: #5252e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(109, 109, 251, 0.25);
+}
+
+
+.displayStudents td:last-child button {
+  background-color: #ef5350;
+}
+
+.displayStudents td:last-child button:hover {
+  background-color: #d93636;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(239, 83, 80, 0.2);
+}
+
+
+.displayStudents td button:active {
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .displayStudents {
+    padding: 30px 15px;
+  }
+
+  .displayStudents h1 {
+    font-size: 25px;
+    margin-bottom: 22px;
+  }
+
+  .displayStudents th,
+  .displayStudents td {
+    padding: 12px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .displayStudents {
+    padding: 25px 10px;
+  }
+
+  .displayStudents h1 {
+    font-size: 22px;
   }
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from "axios"
+import { addStudent } from '../services/studentService';
 
 const AddStudent = () => {
 
@@ -29,7 +30,7 @@ const AddStudent = () => {
     
             console.log(student)
 
-            await axios.post("http://localhost:3000/students",student)
+            await addStudent(student);
     
             alert("register done successfully")
 

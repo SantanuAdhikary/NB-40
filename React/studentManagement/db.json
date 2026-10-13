@@ -1,20 +1,28 @@
 {
   "students": [
     {
-      "sname": "miller",
-      "sid": "101",
-      "semail": "miller@gmail.com",
-      "phNo": "9876543210",
-      "dept": "cse",
-      "id": "_FBck4SACmc"
-    },
-    {
       "sname": "scott",
       "sid": "102",
       "semail": "scott@gmail.com",
       "phNo": "7076543812",
       "dept": "civil",
       "id": "lAx6BdtICSY"
+    },
+    {
+      "sname": "john",
+      "sid": "103",
+      "semail": "john@gmail.com",
+      "phNo": "9087654321",
+      "dept": "eee",
+      "id": "eAN6vmMirgQ"
+    },
+    {
+      "sname": "miller",
+      "sid": "150",
+      "semail": "miller@gmail.com",
+      "phNo": "9182736540",
+      "dept": "cse",
+      "id": "ejUYx76bYdU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
