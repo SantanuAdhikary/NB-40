@@ -1,11 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { deleteStudent, getStudents } from '../services/studentService'
+import { useNavigate } from 'react-router-dom'
 
 const DisplayStudents = () => {
 
   let [students,setStudents] = useState([])
 
+  const navigate = useNavigate();
   let fethStudents = async()=>{
 
     try{
@@ -21,6 +23,14 @@ const DisplayStudents = () => {
   useEffect(()=>{
    fethStudents()
   },[])
+
+  let handleEdit =(id)=>{
+
+    // console.log(id)
+
+    navigate(`/edit/${id}`)
+
+  }
 
 
   let handleDelete =async (id)=>{
@@ -65,7 +75,7 @@ const DisplayStudents = () => {
                        <td>{student.semail}</td>
                        <td>{student.dept}</td>
                        <td>{student.phNo}</td>
-                       <td><button>edit</button></td>
+                       <td><button onClick={()=>handleEdit(student.id)}>edit</button></td>
                        <td><button onClick={()=> handleDelete(student.id)}>delete</button></td>
                    </tr>
                 })
